@@ -1,0 +1,2 @@
+module WizardControllerHelper
+end
