@@ -2089,3 +2089,32 @@ Processing WizardControllerController#index (for 127.0.0.1 at 2011-03-12 11:13:5
   Parameters: {"current_step"=>"1"}
 Rendering wizard_controller/index
 Completed in 0ms (View: 0 | 200 OK [http://localhost/wizard_controller?current_step=1]
+
+
+Processing WizardControllerController#index (for 127.0.0.1 at 2011-03-12 19:11:08) [GET]
+Rendering wizard_controller/index
+Completed in 15ms (View: 15 | 200 OK [http://localhost/wizard_controller]
+
+
+Processing WizardControllerController#index (for 127.0.0.1 at 2011-03-12 19:11:18) [GET]
+  Parameters: {"current_step"=>"2"}
+Rendering wizard_controller/index
+Completed in 16ms (View: 16 | 200 OK [http://localhost/wizard_controller?current_step=2]
+
+
+Processing WizardControllerController#index (for 127.0.0.1 at 2011-03-12 19:11:33) [GET]
+  Parameters: {"current_step"=>"1"}
+Rendering wizard_controller/index
+Completed in 15ms (View: 15 | 200 OK [http://localhost/wizard_controller?current_step=1]
+
+
+Processing WizardControllerController#index (for 127.0.0.1 at 2011-03-12 19:11:36) [GET]
+  Parameters: {"current_step"=>"2"}
+Rendering wizard_controller/index
+Completed in 16ms (View: 16 | 200 OK [http://localhost/wizard_controller?current_step=2]
+
+
+Processing WizardControllerController#index (for 127.0.0.1 at 2011-03-12 19:11:42) [GET]
+  Parameters: {"current_step"=>"3"}
+Rendering wizard_controller/index
+Completed in 16ms (View: 16 | 200 OK [http://localhost/wizard_controller?current_step=3]

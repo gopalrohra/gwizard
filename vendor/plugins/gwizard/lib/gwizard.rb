@@ -30,23 +30,30 @@ end
 
 def step(step_number, html_options={}, &proc)
 current_step=@binding.params[:current_step]==nil ? 1 : @binding.params[:current_step].to_i
-if current_step!=step_number
-return
-end
-back_url=generate_back_url(current_step)
-next_url=generate_next_url(current_step)
-finish_url=@options[:finish_url]
+return if current_step!=step_number
 content=@binding.capture(&proc)
 @binding.concat(tag(:div,html_options,true))
 @binding.concat(@binding.content_tag(:div,content,{}))
-@binding.concat(@binding.tag(:input, {:type=>"button", :value=>"Back", :name=>"back", :onclick=>"javascript:gw_back('#{back_url}')"}))
-@binding.concat(@binding.tag(:input, {:type=>"button", :value=>"Next", :name=>"Next", :onclick=>"javascript:gw_next('#{next_url}')"}))
-@binding.concat(@binding.tag(:input, {:type=>"button", :value=>"Skip", :name=>"Skip", :onclick=>"javascript:gw_skip('#{next_url}')"}))
-@binding.concat(@binding.tag(:input, {:type=>"button", :value=>"Finish", :name=>"Finish", :onclick=>"javascript:gw_finish('#{finish_url}')"}))
+insert_buttons_for_navigation(current_step)
 @binding.concat("</div>")
 end
 
 private
+
+def insert_buttons_for_navigation(current_step)
+steps=@options[:steps].to_i
+back_url=generate_back_url(current_step)
+next_url=generate_next_url(current_step)
+finish_url=@options[:finish_url]
+if current_step>1
+@binding.concat(@binding.tag(:input, {:type=>"button", :value=>"Back", :name=>"back", :onclick=>"javascript:gw_back('#{back_url}')"}))
+end
+if current_step<steps
+@binding.concat(@binding.tag(:input, {:type=>"button", :value=>"Next", :name=>"Next", :onclick=>"javascript:gw_next('#{next_url}')"}))
+@binding.concat(@binding.tag(:input, {:type=>"button", :value=>"Skip", :name=>"Skip", :onclick=>"javascript:gw_skip('#{next_url}')"}))
+end
+@binding.concat(@binding.tag(:input, {:type=>"button", :value=>"Finish", :name=>"Finish", :onclick=>"javascript:gw_finish('#{finish_url}')"}))
+end
 
 def generate_back_url(current_step)
 if current_step>1
