@@ -2118,3 +2118,19 @@ Processing WizardControllerController#index (for 127.0.0.1 at 2011-03-12 19:11:4
   Parameters: {"current_step"=>"3"}
 Rendering wizard_controller/index
 Completed in 16ms (View: 16 | 200 OK [http://localhost/wizard_controller?current_step=3]
+
+
+Processing WizardControllerController#index (for 127.0.0.1 at 2011-03-15 12:27:00) [GET]
+Rendering wizard_controller/index
+Completed in 16ms (View: 16 | 200 OK [http://localhost/wizard_controller]
+
+
+Processing WizardControllerController#index (for 127.0.0.1 at 2011-03-15 12:31:11) [GET]
+Rendering wizard_controller/index
+Completed in 16ms (View: 16 | 200 OK [http://localhost/wizard_controller]
+
+
+Processing WizardControllerController#index (for 127.0.0.1 at 2011-03-15 12:31:14) [GET]
+  Parameters: {"current_step"=>"2"}
+Rendering wizard_controller/index
+Completed in 0ms (View: 0 | 200 OK [http://localhost/wizard_controller?current_step=2]
