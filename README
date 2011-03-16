@@ -1,13 +1,11 @@
 Gwizard
 =======
 
-Introduction goes here.
 gwizard is a rails plugin to generate html wizards.
 
 Example
 =======
 
-Example goes here.
 <html>
 <head>
 <title>wizard</title>
@@ -34,4 +32,4 @@ Example goes here.
 </body>
 </html>
 
-Copyright (c) 2011 [name of plugin creator], released under the MIT license
+Copyright (c) 2011 GopalRohra, released under the MIT license
